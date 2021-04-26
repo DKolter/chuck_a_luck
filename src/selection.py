@@ -1,4 +1,3 @@
-from PIL import Image, ImageTk
 from utils import rounded_rectangle, load_asset
 
 class Selection:

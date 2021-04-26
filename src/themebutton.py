@@ -1,4 +1,3 @@
-from PIL import Image, ImageTk
 from utils import load_asset
 
 class ThemeButton:
@@ -21,7 +20,7 @@ class ThemeButton:
         self.mode = ThemeButton.LIGHT
 
         # Create the label and bind the click event
-        self.label = canvas.create_image(450, 565, image=self.translator[ThemeButton.LIGHT])
+        self.label = canvas.create_image(450, 615, image=self.translator[ThemeButton.LIGHT])
         canvas.tag_bind(self.label, "<Button-1>", self.invert)
 
     def invert(self, event):

@@ -1,5 +1,6 @@
 from tkinter import Tk, Canvas
 from dices import Dices
+from helpbutton import HelpButton, TourGuide
 from rollbutton import RollButton
 from score import Score
 from selection import Selection
@@ -12,11 +13,11 @@ class ChuckALuck:
         # Initialize the window
         self.window = Tk()
         self.window.title("Chuck a Luck")
-        self.window.geometry("500x600")
+        self.window.geometry("500x650")
         self.window.resizable(False, False)
 
         # Initialize a canvas
-        self.canvas = Canvas(self.window, bg="#FFFFFF", width=500, height=600, bd=0, highlightthickness=0)
+        self.canvas = Canvas(self.window, bg="#FFFFFF", width=500, height=650, bd=0, highlightthickness=0)
         self.canvas.place(x=0, y=0)
 
         # Create the subcomponents
@@ -26,9 +27,13 @@ class ChuckALuck:
         self.rollbutton = RollButton(self.canvas, self.roll)
         self.supportbutton = SupportButton(self.canvas, self.open_support)
         self.themebutton = ThemeButton(self.canvas, self.change_theme)
+        self.helpbutton = HelpButton(self.canvas, self.tour_guide)
 
         # Start the mainloop
         self.window.mainloop()
+
+    def tour_guide(self, event):
+        TourGuide(self.canvas, self.themebutton.mode)
 
     def roll(self, event):
         # Roll the dices

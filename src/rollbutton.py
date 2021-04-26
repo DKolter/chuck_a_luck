@@ -1,4 +1,3 @@
-from PIL import Image, ImageTk
 from utils import load_asset
 
 class RollButton:
