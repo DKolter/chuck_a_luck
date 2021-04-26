@@ -1,4 +1,5 @@
 from PIL import Image, ImageTk
+from utils import load_asset
 
 class ThemeButton:
     # Mode
@@ -12,8 +13,8 @@ class ThemeButton:
 
         # Translator from mode to image
         self.translator = {
-            ThemeButton.LIGHT: ImageTk.PhotoImage(Image.open("assets/themelight.png")),
-            ThemeButton.DARK: ImageTk.PhotoImage(Image.open("assets/themedark.png"))
+            ThemeButton.LIGHT: load_asset("themelight.png"),
+            ThemeButton.DARK: load_asset("themedark.png")
         }
 
         # Set initial value of mode

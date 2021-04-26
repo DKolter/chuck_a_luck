@@ -1,5 +1,5 @@
 from PIL import Image, ImageTk
-from rounded_rect import rounded_rectangle
+from utils import rounded_rectangle, load_asset
 
 class Selection:
     def __init__(self, canvas):
@@ -8,12 +8,12 @@ class Selection:
 
         # Dictionary to translate integers to image
         self.translator = {
-            1: ImageTk.PhotoImage(Image.open("assets/1.png").resize((50, 50))), 
-            2: ImageTk.PhotoImage(Image.open("assets/2.png").resize((50, 50))), 
-            3: ImageTk.PhotoImage(Image.open("assets/3.png").resize((50, 50))), 
-            4: ImageTk.PhotoImage(Image.open("assets/4.png").resize((50, 50))), 
-            5: ImageTk.PhotoImage(Image.open("assets/5.png").resize((50, 50))), 
-            6: ImageTk.PhotoImage(Image.open("assets/6.png").resize((50, 50)))
+            1: load_asset("1.png", (50, 50)), 
+            2: load_asset("2.png", (50, 50)),
+            3: load_asset("3.png", (50, 50)),
+            4: load_asset("4.png", (50, 50)),
+            5: load_asset("5.png", (50, 50)), 
+            6: load_asset("6.png", (50, 50))
         }
 
         # Create the image labels

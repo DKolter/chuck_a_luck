@@ -1,5 +1,5 @@
 from PIL import Image, ImageTk
-from rounded_rect import rounded_rectangle
+from utils import rounded_rectangle, load_asset
 import random
 
 class Dices:
@@ -9,12 +9,12 @@ class Dices:
         
         # Dictionary to translate integers to image
         self.translator = {
-            1: ImageTk.PhotoImage(Image.open("assets/1.png").resize((100, 100))), 
-            2: ImageTk.PhotoImage(Image.open("assets/2.png").resize((100, 100))), 
-            3: ImageTk.PhotoImage(Image.open("assets/3.png").resize((100, 100))), 
-            4: ImageTk.PhotoImage(Image.open("assets/4.png").resize((100, 100))), 
-            5: ImageTk.PhotoImage(Image.open("assets/5.png").resize((100, 100))), 
-            6: ImageTk.PhotoImage(Image.open("assets/6.png").resize((100, 100)))
+            1: load_asset("1.png", (100, 100)), 
+            2: load_asset("2.png", (100, 100)), 
+            3: load_asset("3.png", (100, 100)), 
+            4: load_asset("4.png", (100, 100)), 
+            5: load_asset("5.png", (100, 100)), 
+            6: load_asset("6.png", (100, 100))
         }
 
 	    # Create the image labels
