@@ -5,6 +5,7 @@ from score import Score
 from selection import Selection
 from supportbutton import SupportButton
 from themebutton import ThemeButton
+import webbrowser
 
 class ChuckALuck:
     def __init__(self):
@@ -23,7 +24,7 @@ class ChuckALuck:
         self.score = Score(self.canvas)
         self.selection = Selection(self.canvas)
         self.rollbutton = RollButton(self.canvas, self.roll)
-        self.supportbutton = SupportButton(self.canvas, lambda: None)
+        self.supportbutton = SupportButton(self.canvas, self.open_support)
         self.themebutton = ThemeButton(self.canvas, self.change_theme)
 
         # Start the mainloop
@@ -47,6 +48,10 @@ class ChuckALuck:
         elif mode == ThemeButton.DARK:
             self.canvas.config(bg="#121212")
             self.score.set_fill("white")
+
+    def open_support(self, event):
+        # Open the github page
+        webbrowser.open("https://github.com/DKolter/chuck_a_luck")
 
 if __name__ == "__main__":
     ChuckALuck()
