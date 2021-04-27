@@ -6,7 +6,6 @@ a simple dice game.
 ## Features
 - Dark mode / Light mode
 - Support button
-- Clean layout
-- Proper code structure
+- Help button and tutorial
 
 ![Overview image](https://raw.githubusercontent.com/DKolter/chuck_a_luck/main/assets/overview.png)
