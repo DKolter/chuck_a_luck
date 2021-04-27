@@ -4,11 +4,11 @@ class Score:
         self.canvas = canvas
 
         # Initialize score and color
-        self.score = 0
+        self.score = 100
         self.fill = "black"
 
         # Create score label
-        self.label = canvas.create_text(250, 275, text="0", font=("", 80), fill="black")
+        self.label = canvas.create_text(250, 275, text="100", font=("", 80), fill="black")
 
     def recalculate(self, matches):
         if matches == 0:
